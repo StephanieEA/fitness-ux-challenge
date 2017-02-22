@@ -1,3 +1,74 @@
 h1 {
-  background: magenta;
+  text-align: center;
+  background: #FE5F55;
+  font-family: AvenirNext-Bold;
+  font-size: 36px;
+  color: #FFFFFF;
+}
+
+
+.meter {
+  margin-top: 50vh;
+	height: 40px;
+	position: relative;
+	background: rgba(254,95,85,0.50) ;
+	box-shadow: rgba(255,255,255,0.3);
+}
+
+.meter > span {
+  border-radius: 2px;
+  width: 42%;
+  display: block;
+  height: 100%;
+  background-color: #F8FFE3;
+  position: relative;
+  z-index: 2;
+}
+
+.goal{
+  position: absolute;
+  top: 30%;
+  right: 50%;
+  z-index: 11;
+}
+
+.bottom-container {
+    display: -webkit-flex;
+  	display: flex;
+  	-webkit-justify-content: center;
+  	justify-content: center;
+  	-webkit-flex-wrap: wrap;
+  	flex-wrap: wrap;
+  	margin-top: 15px;
+  	padding: 1.5%;
+  	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	box-sizing: border-box;
+}
+
+.check-box-container {
+  text-align: center;
+  padding-top: 40px;
+  width: 27%;
+  height: 70px;
+  background-color: lightgray;
+  margin: 10px;
+  /* Rectangle 6: */
+  background: rgba(184,216,216,0.20);
+  border: 1px solid rgba(121,158,159,0.20);
+  /* Shape: */
+  /* Stroke 202: */
+  /* Run for fun: */
+  font-family: .SFNSText;
+  font-size: 18px;
+  color: #7A9E9F;
+}
+
+.arrow {
+  font-size: 30px;
+  margin-left: 40px;
+}
+
+.check-buttons {
+  margin-right: 40px;
 }
