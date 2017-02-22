@@ -47,6 +47,7 @@ h1 {
 }
 
 .check-box-container {
+  position: relative;
   text-align: center;
   padding-top: 40px;
   width: 27%;
@@ -65,10 +66,14 @@ h1 {
 }
 
 .arrow {
-  font-size: 30px;
-  margin-left: 40px;
+  font-size: 40px;
+  position: absolute;
+  right: 0;
+  margin-right: 8px;
 }
 
 .check-buttons {
-  margin-right: 40px;
+  font-size: 40px;
+  position: absolute;
+  left: 0;
 }
