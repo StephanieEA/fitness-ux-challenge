@@ -32,6 +32,8 @@ Monthly 2.2.0 by Kevin Thornbloom is licensed under a Creative Commons Attributi
 				parent = "#" + uniqueId,
 				currentDate = new Date(),
 				currentMonth = currentDate.getMonth() + 1,
+				nextMonth = currentDate.getMonth() + 1,
+				lastMonth = currentDate.getMonth() + 1,
 				currentYear = currentDate.getFullYear(),
 				currentDay = currentDate.getDate(),
 				locale = (options.locale || defaultLocale()).toLowerCase(),
@@ -89,7 +91,7 @@ Monthly 2.2.0 by Kevin Thornbloom is licensed under a Creative Commons Attributi
 
 		// Build the month
 		function setMonthly(month, year) {
-			$(parent).data("setMonth", month).data("setYear", year);
+			$(parent).data("setMonth", month).data("setYear", year).data("setLastMonth", lastMonth).data("setNextMonth", nextMonth);
 
 			// Get number of days
 			var index = 0,
@@ -115,7 +117,7 @@ Monthly 2.2.0 by Kevin Thornbloom is licensed under a Creative Commons Attributi
 				if(options.mode === "event") {
 					var dayOfWeek = new Date(year, mZeroed, dayNumber, 0, 0, 0, 0).getDay();
 					$(parent + " .monthly-day-wrap").append("<div"
-						+ attr("class", "m-d monthly-day monthly-day-event" + (isInPast ? " monthly-past-day" : ""))
+						+ attr("class", "m-d monthly-day monthly-day-event" + (isInPast ? " monthly-past-day " : ""))
 						+ attr("data-number", dayNumber)
 						+ ">" + innerMarkup + "</div>");
 					$(parent + " .monthly-event-list").append("<div"
@@ -134,6 +136,14 @@ Monthly 2.2.0 by Kevin Thornbloom is licensed under a Creative Commons Attributi
 
 			if (settingCurrentMonth) {
 				$(parent + ' *[data-number="' + currentDay + '"]').addClass("monthly-today");
+				for(let i=0; i < currentDay; i++){
+						const day = currentDay-i
+						if (day === 9 || day === 10 || day === 12 || day === 1 || day === 5 || day === 6 || day === 22) {
+						$(parent + ' *[data-number="' + day + '"]').addClass("monthly-completed");
+					} else {
+						$(parent + ' *[data-number="' + day + '"]').addClass("monthly-uncompleted");
+					}
+				}
 			}
 
 			// Reset button
@@ -172,6 +182,7 @@ Monthly 2.2.0 by Kevin Thornbloom is licensed under a Creative Commons Attributi
 			for(index = 0; index < divs.length; index += 7) {
 				divs.slice(index, index + 7).wrapAll('<div class="monthly-week"></div>');
 			}
+
 		}
 
 		function addEvent(event, setMonth, setYear) {
@@ -327,7 +338,7 @@ Monthly 2.2.0 by Kevin Thornbloom is licensed under a Creative Commons Attributi
 		// Use the user's locale if possible to obtain a list of short month names, falling back on English
 		function defaultMonthNames() {
 			if(typeof Intl === "undefined") {
-				return ["Janurary", "Feb", "Mar", "Apr", "May", "June", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+				return ["Jan", "Feb", "Mar", "Apr", "May", "June", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 			}
 			var formatter = new Intl.DateTimeFormat(locale, {month: monthNameFormat});
 			var names = [];
