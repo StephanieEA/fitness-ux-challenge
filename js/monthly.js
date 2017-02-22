@@ -35,8 +35,8 @@ Monthly 2.2.0 by Kevin Thornbloom is licensed under a Creative Commons Attributi
 				currentYear = currentDate.getFullYear(),
 				currentDay = currentDate.getDate(),
 				locale = (options.locale || defaultLocale()).toLowerCase(),
-				monthNameFormat = options.monthNameFormat || "short",
-				weekdayNameFormat = options.weekdayNameFormat || "short",
+				monthNameFormat = options.monthNameFormat || "long",
+				weekdayNameFormat = options.weekdayNameFormat || "narrow",
 				monthNames = options.monthNames || defaultMonthNames(),
 				dayNames = options.dayNames || defaultDayNames(),
 				markupBlankDay = '<div class="m-d monthly-day-blank"><div class="monthly-day-number"></div></div>',
@@ -327,7 +327,7 @@ Monthly 2.2.0 by Kevin Thornbloom is licensed under a Creative Commons Attributi
 		// Use the user's locale if possible to obtain a list of short month names, falling back on English
 		function defaultMonthNames() {
 			if(typeof Intl === "undefined") {
-				return ["Jan", "Feb", "Mar", "Apr", "May", "June", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+				return ["Janurary", "Feb", "Mar", "Apr", "May", "June", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 			}
 			var formatter = new Intl.DateTimeFormat(locale, {month: monthNameFormat});
 			var names = [];
