@@ -257,10 +257,9 @@
 
 .monthly-completed .monthly-day-number {
     color: #4F6367;
-    background: #FE5F55;
-    opacity: 50%;
+    background: rgba(254,95,85,0.50);
     border-radius: 0.75em;
-    font-size: 3em;
+    font-size: 2em;
     padding: 0;
     width: 1.25em;
     height: 1.25em;
