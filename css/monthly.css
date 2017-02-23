@@ -5,23 +5,6 @@
 	background: #4F6367;
 }
 
-#last-month {
-	    position: absolute;
-	    left: -30%;
-	    top: 40px;
-	    max-width: 50%;
-			opacity: .1;
-			padding: 25px 15px 20px;
-}
-
-#next-month {
-	position: absolute;
-	right: -30%;
-	top: 40px;
-	max-width: 50%;
-	opacity: .1;
-	padding: 25px 15px 20px;
-}
 
 /* Overall wrapper */
 .monthly {
@@ -78,8 +61,7 @@
 .monthly-header-title a:active {
 	transition: none;
 }
-/* c
-urrent month/yr block */
+/* current month/yr block */
 .monthly-header-title-date,
 .monthly-header-title-date:hover {
 	color: #7A9E9F;
@@ -418,6 +400,24 @@ urrent month/yr block */
 .monthly-locale-fr .monthly-cal:after		{ content: "mois"; }
 .monthly-locale-fr .monthly-list-item:after	{ content: 'aucun événement'; }
 
+#last-month {
+	position: absolute;
+	left: -30%;
+	top: 40px;
+	max-width: 50%;
+	opacity: .1;
+	padding: 25px 15px 20px;
+}
+
+#next-month {
+	position: absolute;
+	right: -30%;
+	top: 40px;
+	max-width: 50%;
+	opacity: .1;
+	padding: 25px 15px 20px;
+}
+
 @media only screen and (max-width: 420px) {
 	h1{
 		font-size: .7em;
@@ -506,9 +506,6 @@ establish the rules based on the calendar element width rather than the device w
 		right: -8%;
 	}
 
-	.monthly-day-event {
-		/*padding-top: 1.3em;*/
-	}
 	.monthly-day-event > .monthly-indicator-wrap {
 		width: auto;
 		max-width: none;
