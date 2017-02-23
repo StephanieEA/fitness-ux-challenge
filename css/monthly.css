@@ -450,17 +450,17 @@ urrent month/yr block */
 	}
 
 	.next-month-link {
-    position: absolute;
+		position: absolute;
     right: 10%;
-    top: 12%;
-    height: 3.5%;
+    top: 70px;
+    height: 2.25%;
 	}
 
 	.last-month-link {
 		position: absolute;
-		left: 10%;
-		top: 12%;
-		height: 3.5%;
+    left: 10%;
+    top: 72px;
+    height: 2.25%;
 	}
 
 	.monthly-header-title a:link, .monthly-header-title a:visited {
