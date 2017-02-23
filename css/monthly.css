@@ -55,7 +55,6 @@
 .monthly-header-title a:visited {
 	display: inline-block;
 	/*border: 1px solid #ccc;*/
-	color: #545454;
 	text-decoration: none;
 	height: 1.75em;
 	line-height: 1.65em;
@@ -83,9 +82,7 @@
 urrent month/yr block */
 .monthly-header-title-date,
 .monthly-header-title-date:hover {
-	/*background: #eee!important;*/
-	/*border: 1px solid #ccc!important;*/
-	color: #545454!important;
+	color: #7A9E9F;
 	cursor: default;
 }
 /* Button to reset to current month */
@@ -169,6 +166,7 @@ urrent month/yr block */
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 1em;
+	color: #7A9E9F;
 }
 
 /* Calendar days wrapper */
@@ -420,6 +418,70 @@ urrent month/yr block */
 .monthly-locale-fr .monthly-cal:after		{ content: "mois"; }
 .monthly-locale-fr .monthly-list-item:after	{ content: 'aucun événement'; }
 
+@media only screen and (max-width: 420px) {
+	h1{
+		font-size: .7em;
+	}
+	.calendar1 {
+		background: none;
+	}
+
+	.lines {
+		height: 30%;
+		padding: 20px;
+	}
+
+	.heart {
+		height: 50%;
+		padding: 15px;
+	}
+
+	#last-month, #next-month {
+		left: 500%;
+	}
+
+	.monthly {
+		min-width: 320px;
+		padding: 0;
+	}
+
+	.goal {
+		right: 25%;
+	}
+
+	.next-month-link {
+    position: absolute;
+    right: 10%;
+    top: 12%;
+    height: 3.5%;
+	}
+
+	.last-month-link {
+		position: absolute;
+		left: 10%;
+		top: 12%;
+		height: 3.5%;
+	}
+
+	.monthly-header-title a:link, .monthly-header-title a:visited {
+		line-height: none;
+	}
+
+	.bottom-container {
+		flex-direction: column;
+	}
+
+	.check-box-container {
+		width: 90%;
+		margin: 10px auto;
+	}
+
+	/*.arrow {
+    font-size: 20px;
+    right: 5%;
+    margin-right: none;
+}*/
+}
 
 /*
 Calendar shows event titles if the device width allows for at least 3em per day (rounded
@@ -430,6 +492,25 @@ a layout-specific width, or you will need to use a library like css-element-quer
 establish the rules based on the calendar element width rather than the device width.
 */
 @media (min-width: 25em) {
+	.monthly, #last-month, #next-month {
+		max-width: 500px;
+		padding-bottom: 20px;
+	}
+
+	.monthly {
+		z-index: 7;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	#last-month {
+		left: -8%;
+	}
+
+	#next-month {
+		right: -8%;
+	}
+
 	.monthly-day-event {
 		/*padding-top: 1.3em;*/
 	}
@@ -472,17 +553,19 @@ establish the rules based on the calendar element width rather than the device w
 		text-overflow: ellipsis;
 	}
 
-.month-link {
-	position: absolute;
-	z-index: 5;
-	bottom: 66%;
-	height: 8%;
-}
+	.month-link {
+		position: absolute;
+		z-index: 5;
+		bottom: 66%;
+		height: 8%;
+	}
 
-.next-month-link {
-  right: 5%;
-}
+	.next-month-link {
+	  right: 5%;
+	}
 
-.last-month-link {
-  left: 5%;
+	.last-month-link {
+	  left: 5%;
+	}
+
 }
