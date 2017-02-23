@@ -469,18 +469,13 @@ urrent month/yr block */
 
 	.bottom-container {
 		flex-direction: column;
+		margin: 0;
 	}
 
 	.check-box-container {
-		width: 90%;
-		margin: 10px auto;
+		width: 100%;
+		margin: 0;
 	}
-
-	/*.arrow {
-    font-size: 20px;
-    right: 5%;
-    margin-right: none;
-}*/
 }
 
 /*
