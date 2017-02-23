@@ -1,6 +1,7 @@
 .calendar1 {
 	width: 100%;
 	max-width: 400px;
+	margin: auto;
 }
 
 /* Overall wrapper */
@@ -194,7 +195,7 @@
 
 /* Days that are part of previous or next month */
 .monthly-day-blank {
-	background: #F3F3F5;
+	/*background: #F3F3F5;*/
 }
 
 /* Event calendar day number styles */
@@ -202,7 +203,7 @@
 	position: absolute;
 	line-height: 1em;
   top: 25%;
-  left: 25%;
+  left: 15%;
   font-size: 2em;
 }
 
@@ -242,11 +243,8 @@
 
 /* Current day style */
 .monthly-today .monthly-day-number {
-	/*color: #FFF;*/
 	background: #F5F5F5;
 	border-radius: 0.75em;
-	/*top: 0.08em;
-	left: 0.05em;*/
 	font-size: 2em;
 	padding: 0;
 	width: 1.25em;

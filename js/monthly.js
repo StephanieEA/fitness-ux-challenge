@@ -137,8 +137,8 @@ Monthly 2.2.0 by Kevin Thornbloom is licensed under a Creative Commons Attributi
 			if (settingCurrentMonth) {
 				$(parent + ' *[data-number="' + currentDay + '"]').addClass("monthly-today");
 				for(let i=0; i < currentDay; i++){
-						const day = currentDay-i
-						if (day === 9 || day === 10 || day === 12 || day === 1 || day === 5 || day === 6 || day === 22) {
+						const day = currentDay-i-1;
+						if (day === 9 || day === 10 || day === 12 || day === 1 || day === 5 || day === 6 || day === 21) {
 						$(parent + ' *[data-number="' + day + '"]').addClass("monthly-completed");
 					} else {
 						$(parent + ' *[data-number="' + day + '"]').addClass("monthly-uncompleted");
