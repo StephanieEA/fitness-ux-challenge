@@ -4,15 +4,23 @@
   <title>Goal Trackr</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="reset.css">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" href="css/monthly.css">
 </head>
 <body>
-  <header><h1>Goal Trackr</h1></header>
+  <header>
+    <img src="css/images/fitHeartIcon.svg" alt="heart logo" class='heart'/>
+    <h1>Goal Trackr</h1>
+    <img class='lines' src="css/images/linesIcon.png" alt="3 line navigation menu?"/>
+  </header>
   <div class="calendar1">
-  <div class="monthly" id="mycalendar"></div>
-</div>
+    <div class="monthly" id="mycalendar"></div>
+    <div id='last-month'></div>
+    <div id='next-month'></div>
+    <img class='next-month-link month-link' src='css/images/nextMonth.png' alt='arrow to next month'/>
+    <img class='last-month-link month-link' src='css/images/lastMonth.png' alt='arrow to last month'/>
+  </div>
   <!-- bar and checkboxes below here -->
   <div class="meter">
     <p class="goal">Goal Progress for 03/06/2017</p>
@@ -30,7 +38,7 @@
   <div class="check-box-container"><button type="checkbox" class="check-buttons"></button><span class="box-text">Do 200 push-ups</span><span class="arrow">❯</span></div>
   <div class="check-box-container"><button type="checkbox" class="check-buttons"></button><span class="box-text">Do 200 push-ups</span><span class="arrow">❯</span></div>
   <div class="check-box-container"><button type="checkbox" class="check-buttons"></button><span class="box-text">Do 200 push-ups</span><span class="arrow">❯</span></div>
-  <div class="check-box-container"><button class="add-new-button"></button>Add a new goal!<span class="arrow">❯</span></div>
+  <div class="check-box-container"><button class="add-new-button">+</button>Add a new goal!<span class="arrow">❯</span></div>
 </div>
 </body>
 <script type="text/javascript" src="js/jquery.js"></script>
@@ -38,6 +46,8 @@
 <script type="text/javascript">
     $(window).load( function() {
         $('#mycalendar').monthly();
+        $('#last-month').monthly();
+        $('#next-month').monthly();
     });
 </script>
 </html>
