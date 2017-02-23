@@ -156,8 +156,8 @@ urrent month/yr block */
 	table-layout: fixed;
 	width: 100%;
 	background: #fff;
-	border-bottom: 1px solid #EBEBEB;
 }
+
 .monthly-day-title-wrap div {
 	width: 14.28%!important;
 	display: table-cell;
