@@ -7,29 +7,29 @@
 
 #last-month {
 	    position: absolute;
-	    left: 0;
+	    left: -30%;
 	    top: 40px;
-	    max-width: 30%;
+	    max-width: 50%;
 			opacity: .1;
-			padding: 20px 15px 50px;
+			padding: 25px 15px 20px;
 }
 
 #next-month {
 	position: absolute;
-	right: 0%;
+	right: -30%;
 	top: 40px;
-	max-width: 30%;
+	max-width: 50%;
 	opacity: .1;
-	padding: 20px 15px 50px;
+	padding: 25px 15px 20px;
 }
 
 /* Overall wrapper */
 .monthly {
 	background: #F3F3F5;
 	color: #545454;
-	max-width: 30%;
+	max-width: 50%;
 	margin:auto;
-	padding: 20px 15px 50px;
+	padding: 10px 15px 20px;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -65,12 +65,12 @@
 }
 /* Add some roundy-ness */
 .monthly-header-title a:first-of-type {
-	border-top-left-radius: 1em;
-	border-bottom-left-radius: 1em;
+	/*border-top-left-radius: 1em;
+	border-bottom-left-radius: 1em;*/
 }
 .monthly-header-title a:last-of-type {
-	border-top-right-radius: 1em;
-	border-bottom-right-radius: 1em;
+	/*border-top-right-radius: 1em;
+	border-bottom-right-radius: 1em;*/
 }
 .monthly-header-title a:hover {
 	color: #fff;
@@ -106,14 +106,17 @@ urrent month/yr block */
 }
 
 /* wrapper for left/right buttons to make the clickable area bigger */
+
 .monthly-prev,
 .monthly-next {
 	position: absolute;
 	top: 0;
 	width: 3em;
 	height: 100%;
-	opacity: .5;
+	opacity: 0;
 }
+
+
 .monthly-prev {
 	left: 0;
 }
@@ -219,7 +222,7 @@ urrent month/yr block */
 	position: absolute;
 	line-height: 1.25em;
   top: 25%;
-  left: 25%;
+  left: 33.3%;
   font-size: 1em;
 	border-radius: 0.75em;
 	padding: 2px;
@@ -428,7 +431,7 @@ establish the rules based on the calendar element width rather than the device w
 */
 @media (min-width: 25em) {
 	.monthly-day-event {
-		padding-top: 1.3em;
+		/*padding-top: 1.3em;*/
 	}
 	.monthly-day-event > .monthly-indicator-wrap {
 		width: auto;
@@ -468,3 +471,18 @@ establish the rules based on the calendar element width rather than the device w
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
+
+.month-link {
+	position: absolute;
+	z-index: 5;
+	bottom: 66%;
+	height: 8%;
+}
+
+.next-month-link {
+  right: 5%;
+}
+
+.last-month-link {
+  left: 5%;
+}
