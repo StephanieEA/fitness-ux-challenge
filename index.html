@@ -12,6 +12,8 @@
   <header><h1>Goal Trackr</h1></header>
   <div class="calendar1">
     <div class="monthly" id="mycalendar"></div>
+    <div id='last-month'></div>
+    <div id='next-month'></div>
   </div>
   <!-- bar and checkboxes below here -->
   <div class="meter">
@@ -38,6 +40,8 @@
 <script type="text/javascript">
     $(window).load( function() {
         $('#mycalendar').monthly();
+        $('#last-month').monthly();
+        $('#next-month').monthly();
     });
 </script>
 </html>
