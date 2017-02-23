@@ -1,16 +1,16 @@
 .calendar1 {
 	width: 100%;
-	/*max-width: 400px;*/
-	margin: 5px auto;
+	margin: auto;
 	overflow: hidden;
+	background: #4F6367;
 }
 
-/*#last-month {
+#last-month {
 	    position: absolute;
 	    left: 0;
 	    top: 40px;
 	    max-width: 30%;
-			background: rgba(79,98,103,0.70);
+			opacity: .1;
 }
 
 #next-month {
@@ -18,8 +18,8 @@
 	right: 0%;
 	top: 40px;
 	max-width: 30%;
-	background: rgba(79,98,103,0.70);
-}*/
+	opacity: .1;
+}
 
 /* Overall wrapper */
 .monthly {
@@ -464,19 +464,4 @@ establish the rules based on the calendar element width rather than the device w
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
-	}
-	#last-month {
-		    position: absolute;
-		    left: 0;
-		    top: 40px;
-		    max-width: 30%;
-				background: rgba(79,98,103,0.70);
-	}
-
-	#next-month {
-		position: absolute;
-		right: 0%;
-		top: 40px;
-		max-width: 30%;
-		background: rgba(79,98,103,0.70);
 	}
